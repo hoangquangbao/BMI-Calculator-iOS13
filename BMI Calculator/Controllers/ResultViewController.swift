@@ -11,14 +11,14 @@ import UIKit
 class ResultViewController: UIViewController {
 
     var resultBMIBrain = BMIBrain()
+    var bmiValue: String?
     
     @IBOutlet weak var bmiLable: UILabel!
     @IBOutlet weak var adviceLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let bmiIndex = resultBMIBrain.resultBMI()
-        bmiLable.text = String(format: "%.1f", bmiIndex)
+        bmiLable.text = bmiValue
     }
     
     @IBAction func recaculatePressed(_ sender: UIButton) {
