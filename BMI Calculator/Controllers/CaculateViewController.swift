@@ -40,10 +40,12 @@ class CaculateViewController: UIViewController {
     @IBAction func caculatorPressed(_ sender: UIButton) {
         
         //[???]Tìm cách đặt hàm tính bmi ở đây#Sau đó đưa giá trị sang ResultViewController thì hay hơn
+        //[OK]Hàm "override func prepare(for segue: UIStoryboardSegue, sender: Any?)" ở dưới đã giải quyết đc cho yêu cầu trên
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "goToResult" {
             
             /*- Ta đã biết chắc đến đây, chương trình sẽ điều hướng đến ResultViewController. Sẽ dùng biến "destinationVC" để tham chiếu đến các giá trị trong ResultViewController.
