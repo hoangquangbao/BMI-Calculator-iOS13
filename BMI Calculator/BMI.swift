@@ -13,5 +13,5 @@ struct BMI {
     var height: Float
     var weight: Float
     var index: Float
-    
+    var advice: [String]
 }

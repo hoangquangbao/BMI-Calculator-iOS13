@@ -55,7 +55,9 @@ class CaculateViewController: UIViewController {
                 + Điều hướng "destinationVC" đến phân cảnh thuộc ResultViewContoller
                 + Chỉ định bộ điều khiển đích cho "destinationVC" là ResultViewController*/
             let destinationVC = segue.destination as! ResultViewController
-            destinationVC.bmiValue = String(format: "%.1f", caculateBMIBrain.resultBMI())
+            destinationVC.bmiValue = caculateBMIBrain.getResult()
+            destinationVC.bmiAdvice = caculateBMIBrain.getAdvice()
+            //destinationVC.bmiColor = caculateBMIBrain.getColor()
         }
     }
     /*
