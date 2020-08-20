@@ -2,7 +2,7 @@
 //  SecondViewController.swift
 //  BMI Calculator
 //
-//  Created by Boboli on 8/12/20.
+//  Created by Boboli on 08/08/2020.
 //  Copyright © 2020 Boboli. All rights reserved.
 //
 
@@ -37,7 +37,6 @@ class ResultViewController: UIViewController {
     }
     
     @IBAction func recaculatePressed(_ sender: UIButton) {
-        
         //Để quay lại màn hình trc, ta chỉ cần loại bỏ màn hình hiện tại. Nil nghĩa là kocos j xảy ra sau khi loại bỏ
         self.dismiss(animated: true, completion: nil)
     }
@@ -51,5 +50,4 @@ class ResultViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
 }

@@ -2,14 +2,13 @@
 //  BMI.swift
 //  BMI Calculator
 //
-//  Created by Boboli on 8/8/20.
-//  Copyright © 2020 Angela Yu. All rights reserved.
+//  Created by Boboli on 08/08/2020.
+//  Copyright © 2020 Boboli. All rights reserved.
 //
 
 import Foundation
 
 struct BMI {
-    
     var height: Float
     var weight: Float
     var index: Float

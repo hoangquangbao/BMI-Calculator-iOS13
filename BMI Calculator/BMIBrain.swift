@@ -2,28 +2,25 @@
 //  BMIBrain.swift
 //  BMI Calculator
 //
-//  Created by Boboli on 8/8/20.
-//  Copyright © 2020 Angela Yu. All rights reserved.
+//  Created by Boboli on 08/08/2020.
+//  Copyright © 2020 Boboli. All rights reserved.
 //
 
 import Foundation
 
 struct BMIBrain {
     
-    var bmi = BMI(height: 1.50, weight: 100, index: 0, advice: ["[Gầy độ 3] Bạn gầy quá đi à.", "[Gầy độ 2] Gầy vậy ai yêu chời!", "[Gầy độ 1] Bạn nên ăn nhiều hơn.", "Tuyệt! Bạn có chỉ số BMI bình thường", "Chời ơi! bạn thừa cân rồi", "[Béo phì độ 1] Béo mặc đồ xấu lắm á ngen.", "[Béo phì độ 2] Ăn ít lại bạn ơi!", "[Béo phì độ 3] Bạn là đứa ham ăn"])
+    var bmi = BMI(height: 1.50, weight: 100, index: 0, advice: ["[Gầy độ 3] Bạn gầy quá đi à.", "[Gầy độ 2] Gầy vậy ai yêu chời!", "[Gầy độ 1] Bạn nên ăn nhiều hơn.", "Tuyệt! Bạn có chỉ số BMI bình thường", "Chời ơi! Bạn thừa cân rồi", "[Béo phì độ 1] Béo mặc đồ xấu lắm á ngen.", "[Béo phì độ 2] Ăn ít lại bạn ơi!", "[Béo phì độ 3] Bạn là đứa ham ăn"])
     
     mutating func getHeight(_ userChoice: Float) {
-        
         bmi.height = userChoice
     }
     
     mutating func getWeight(_ userChoice: Float) {
-        
         bmi.weight = userChoice
     }
     
     mutating func getResult() -> Float {
-        
         if (bmi.height != 0 && bmi.weight != 0) {
             bmi.index = bmi.weight / pow(bmi.height,2)
             return bmi.index
@@ -33,7 +30,6 @@ struct BMIBrain {
     }
     
     func getAdvice() -> String {
-        
         switch bmi.index {
         case ..<16: return bmi.advice[0]
         case ..<17: return bmi.advice[1]
