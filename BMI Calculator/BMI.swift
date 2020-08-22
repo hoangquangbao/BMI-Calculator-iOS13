@@ -6,11 +6,10 @@
 //  Copyright © 2020 Boboli. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct BMI {
-    var height: Float
-    var weight: Float
     var index: Float
-    var advice: [String]
+    var advice: String
+    var color: UIColor
 }
