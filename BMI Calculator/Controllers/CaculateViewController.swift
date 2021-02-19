@@ -34,11 +34,14 @@ class CaculateViewController: UIViewController {
         let weight = weightSlider.value
         
         caculate.caculatorBMI(height: height, weight: weight)
+        //Điều hướng đến VC cần đến
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //if segue.identifier == "goToResult" {
+        //Apple thiết kế khi tạo segue nó sẽ khởi tạo chế dộ xem giao diện người dùng vì vậy vc của chúng ta là ..
+        //Thu hẹp kiểu dữ liệu và chỉ định chính xác kiểu dữ liệu mà đích đến sẽ là ResultViewController bằng từ khoá as!
         let destinationVC = segue.destination as! ResultViewController
         destinationVC.bmiValue = caculate.getBMIValue()
         destinationVC.bmiAdvice = caculate.getAdvice()
